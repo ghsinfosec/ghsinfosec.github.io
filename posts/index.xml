@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on ghsinfosec blog</title>
+    <link>https://ghsinfosec.github.io/posts/</link>
+    <description>Recent content in Posts on ghsinfosec blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 05 Nov 2022 09:42:01 -0400</lastBuildDate><atom:link href="https://ghsinfosec.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Welcome</title>
+      <link>https://ghsinfosec.github.io/posts/welcome/</link>
+      <pubDate>Sat, 05 Nov 2022 09:42:01 -0400</pubDate>
+      
+      <guid>https://ghsinfosec.github.io/posts/welcome/</guid>
+      <description>Welcome to my blog! I&amp;rsquo;ll be posting content here that corresponds to my YouTube channel where I think it would be beneficial, as well as cybersecurity topics that I find interesting.
+I hope you&amp;rsquo;ll find the content here and on my channel useful!
+-ghsinfosec</description>
+    </item>
+    
+  </channel>
+</rss>
