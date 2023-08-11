@@ -3,10 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://ghsinfosec.github.io/</loc>
-    <lastmod>2022-11-05T09:42:01-04:00</lastmod>
+    <lastmod>2023-08-11T08:03:57-04:00</lastmod>
   </url><url>
     <loc>https://ghsinfosec.github.io/posts/</loc>
-    <lastmod>2022-11-05T09:42:01-04:00</lastmod>
+    <lastmod>2023-08-11T08:03:57-04:00</lastmod>
+  </url><url>
+    <loc>https://ghsinfosec.github.io/posts/the-journey-to-my-first-bug/</loc>
+    <lastmod>2023-08-11T08:03:57-04:00</lastmod>
   </url><url>
     <loc>https://ghsinfosec.github.io/posts/welcome/</loc>
     <lastmod>2022-11-05T09:42:01-04:00</lastmod>

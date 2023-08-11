@@ -6,7 +6,17 @@
     <description>Recent content on ghsinfosec blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 05 Nov 2022 09:42:01 -0400</lastBuildDate><atom:link href="https://ghsinfosec.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 11 Aug 2023 08:03:57 -0400</lastBuildDate><atom:link href="https://ghsinfosec.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Starting in Bug Bounty: The Overwhelming Journey to My Underwhelming First Bug</title>
+      <link>https://ghsinfosec.github.io/posts/the-journey-to-my-first-bug/</link>
+      <pubDate>Fri, 11 Aug 2023 08:03:57 -0400</pubDate>
+      
+      <guid>https://ghsinfosec.github.io/posts/the-journey-to-my-first-bug/</guid>
+      <description>This year I set a goal for myself to buckle down on bug bounty and find a valid bug. TL;DR - I did meet my goal (sort of) and as the title says - it&amp;rsquo;s underwhelming&amp;hellip; but I&amp;rsquo;m more motivated now than ever and I hope this motivates you as well if you&amp;rsquo;re new to bug bounty!
+Disclaimer: This isn&amp;rsquo;t advice on what to do, per se, or &amp;ldquo;how to be successful&amp;rdquo; in bug bounty - there are many opinions about those things.</description>
+    </item>
+    
     <item>
       <title>Welcome</title>
       <link>https://ghsinfosec.github.io/posts/welcome/</link>

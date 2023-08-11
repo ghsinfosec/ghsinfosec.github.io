@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Starting in Bug Bounty: The Overwhelming Journey to My Underwhelming First Bug // ghsinfosec blog</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.92.2" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="ghsinfosec" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="/css/main.min.0fb49e70a30412f97ddfc418e18fefef1d9fcdebe45f634dbbba768b00fe1eec.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Starting in Bug Bounty: The Overwhelming Journey to My Underwhelming First Bug"/>
+<meta name="twitter:description" content="This year I set a goal for myself to buckle down on bug bounty and find a valid bug. TL;DR - I did meet my goal (sort of) and as the title says - it&rsquo;s underwhelming&hellip; but I&rsquo;m more motivated now than ever and I hope this motivates you as well if you&rsquo;re new to bug bounty!
+Disclaimer: This isn&rsquo;t advice on what to do, per se, or &ldquo;how to be successful&rdquo; in bug bounty - there are many opinions about those things."/>
+
+    <meta property="og:title" content="Starting in Bug Bounty: The Overwhelming Journey to My Underwhelming First Bug" />
+<meta property="og:description" content="This year I set a goal for myself to buckle down on bug bounty and find a valid bug. TL;DR - I did meet my goal (sort of) and as the title says - it&rsquo;s underwhelming&hellip; but I&rsquo;m more motivated now than ever and I hope this motivates you as well if you&rsquo;re new to bug bounty!
+Disclaimer: This isn&rsquo;t advice on what to do, per se, or &ldquo;how to be successful&rdquo; in bug bounty - there are many opinions about those things." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ghsinfosec.github.io/posts/the-journey-to-my-first-bug/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-08-11T08:03:57-04:00" />
+<meta property="article:modified_time" content="2023-08-11T08:03:57-04:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://ghsinfosec.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="ghsinfosec" /></a>
+      <span class="app-header-title">ghsinfosec blog</span>
+      <p>Husband, dad, and simply a dude on a journey to be better at cybersecurity.</p>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Starting in Bug Bounty: The Overwhelming Journey to My Underwhelming First Bug</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Aug 11, 2023
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          8 min read
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <p>This year I set a goal for myself to buckle down on bug bounty and find a valid bug. TL;DR - I did meet my goal (sort of) and as the title says - it&rsquo;s underwhelming&hellip;
+but I&rsquo;m more motivated now than ever and I hope this motivates you as well if you&rsquo;re new to bug bounty!</p>
+<p><em>Disclaimer:</em> This isn&rsquo;t advice on what to do, per se, or &ldquo;how to be successful&rdquo; in bug bounty - there are many opinions about those things. This is just my (lack of) experience.</p>
+<h3 id="but-first-a-quick-backstory">But first, a quick backstory</h3>
+<p>I&rsquo;ve worked in cybersecurity for several years now and got both of my degrees in Information Technology.
+Most of my education and job focus has been on the defensive side of things,
+but being the curious person I am I&rsquo;ve spent a considerable amount of time on <a href="https://tryhackme.com/p/ghsinfosec">TryHackMe</a>
+and <a href="https://app.hackthebox.com/profile/278352">HackTheBox</a> because I have always been fascinated with hacking.</p>
+<p>Occassionally I&rsquo;ll participate in CTF&rsquo;s and I&rsquo;ve even finished in the top 10 on several smaller events of about 150ish participants!
+Naturally the desire to &ldquo;do bigger things&rdquo; and potentially earn some extra money led me to bug bounty. My YouTube history became
+loaded with videos from <a href="https://www.youtube.com/@NahamSec">NahamSec</a>, <a href="https://www.youtube.com/@STOKfredrik">STÖK</a>, and several others so I had to give it a shot.</p>
+<p>I&rsquo;m pretty self-aware and realize that I&rsquo;m not a 1337 h4ck3r, but I&rsquo;ve got some general understanding of vulns and how to exploit them. I use linux (not arch btw), dabble in python, can read code relatively well&hellip;
+This will be fairly easy right??</p>
+<p>Meh&hellip; not so much :)</p>
+<h3 id="hunting-bugs-for-the-first-time">Hunting bugs for the first time</h3>
+<p>Full disclosure - I still struggle with these challenges, but I hope that you (and I!) can learn from my mistakes.</p>
+<p><em>Challenge #1: Picking a target</em></p>
+<p>This probably deserves a topic on its own, so I&rsquo;ll be brief. Choosing a target to hunt was like finding a needle in a haystack.
+Only there are many haystacks filled with many needles all around you and all you have to do is open your eyes and grab one. So I picked one and started
+hacking. About an hour later I picked another, and another, and another&hellip;</p>
+<p><em>Challenge #2: Start hacking</em></p>
+<p>Long story short - I started some recon, launched Burp and started going through the motions of looking for bugs. Only &ldquo;there were none&rdquo; I thought, so I moved on to my next
+target. Rinse, repeat. I got stuck in an infinite loop of whack-a-mole jumping from program to program only to come up empty-handed.</p>
+<p>At this point I&rsquo;m thinking that I&rsquo;m just an imposter. Was I wrong for assuming that because I have some knowledge and skills that I should be
+able to find bugs? Do I actually possess the knowledge and skills that I think I do??</p>
+<p>Well, I wasn&rsquo;t necessarily wrong - my approach was wrong. Also, I do have at least <em>some</em> skills, so that wasn&rsquo;t right either. So why is this so hard?</p>
+<p>That&rsquo;s hacking for you. The bugs are there it&rsquo;s just not always evident, nor is it always easy.</p>
+<h3 id="changing-my-mindset">Changing my mindset</h3>
+<p>Around this time the <a href="https://l.ctbb.show/rhynoraterpod">Critical Thinking Bug Bounty Podcast</a> was launched. I looked for bug bounty podcasts in the weeks before CTBB launched,
+but there wasn&rsquo;t really much out there. The timing could not have been more perfect. Justin and Joel really have something special with that podcast, so if
+you&rsquo;re not listening you are missing out! Seriously!</p>
+<p>One episode that sticks out in my mind is where they are talking about this very subject. Essentially you are trying to hack a company that literally pays a team
+of people to prevent hackers from hacking them as their full-time job. Just let that sink in&hellip; the odds are <em>not</em> in your favor as a hacker!</p>
+<p>With that, I decided to step back and reflect on what I was doing, as well as address my &ldquo;imposter syndrome&rdquo;. First, I had to remind myself that
+even though I&rsquo;m not a seasoned hacker, I do in fact know several bug classes and how to exploit them in the general sense. There&rsquo;s always room for improvement, but the
+fundamentals are there. Heck even the seasoned hackers have imposter syndrome, so why should I be discouraged? I&rsquo;m not alone in struggling to hack.</p>
+<p>Second, I have other hobbies that are not related to tech and I was not spending much (if any) time doing them. I was solely focused on finding a bug and it was
+driving me insane. My wife reminded me of this and suggested that I take a break and do something else. She was right (like always! :P) and I&rsquo;m grateful to
+have such a supportive wife.</p>
+<p>There&rsquo;s more I could say about this part of my journey, but just know that finding your identity in something outside of hacking really helps with this.</p>
+<h3 id="changing-my-approach">Changing my approach</h3>
+<p>With my head back on straight, it was time to restrategize. In addition to CTBB, one talk I had listened to came to mind: <a href="https://www.youtube.com/watch?v=0QFByAYQ_p0">zseano&rsquo;s talk at NahamCon</a> (from 2021 I think?)
+. What it boils down to is rather than getting stuck in the infinite loop of program hopping, pick one target and stick
+to it for the long game. Why? Because there are bugs to be found everywhere, you just need to take the time to find them. You can&rsquo;t very well do that
+if you&rsquo;re bouncing from program to program.</p>
+<p>This is solid advice! I decided that I would not leave a program until I had uncovered every piece of the application inside and out.</p>
+<h3 id="the-results">The results</h3>
+<p>I spent about two months on a single program and learned a lot about how it behaved, what functionality my profile had, how it was gathering data, etc. Then
+one day I saw something! I found an API key for the application itself. After some fiddling around and reading the API docs I was able to validate that the
+key belonged to a consumer for a third-party integration with the app. It had limited functionality, but ultimately I believed it was worth reporting so I submitted it as a P4.</p>
+<p>Having never submitted a bug report, this was another hurdle for me. The fear of a rejected report. I didn&rsquo;t know what to expect from the triage team
+or the program itself. A few days later I was heading out of town with my wife when I got an email from the triage team. I glanced at it quickly and saw that it had
+been changed from a P4 to a P1!!!!</p>
+<p><em>Say whaaaaaaattttt!!??!?</em> My first bug submission was a P1!? I was not expecting that at all!!</p>
+<p><em>&hellip;but wait, there&rsquo;s more&hellip;</em></p>
+<p>I didn&rsquo;t get to read the entire message because I was driving, so what I <strong>didn&rsquo;t</strong> see was that it was also a duplicate&hellip; and it was also marked as NA&hellip;.</p>
+<p>I was disappointed, but I just laughed it off. I got over my fear of submitting my first bug and was ready to move on. Over the next few weeks I submitted
+a couple more bugs to the program and they were not dupes, but they were marked NA as there wasn&rsquo;t really any impact.</p>
+<p>Ultimately I regrouped and ended up settling on a mobile application. I&rsquo;ve not had much experience with mobile hacking, but it was interesting to me and personally
+I&rsquo;m more likely to stick to something that I find interesting. By the way, that is another key component to being successful in bug bounty. Hack on
+stuff that you use and that you like!</p>
+<p>The app I was hacking on was not something that I personally used, but I found the process fun and enjoyable. I only spent a couple of weeks on it
+before I actually found something interesting (at least I thought).</p>
+<p>I submitted my report as a P4 finding and it got accepted, but it was dropped to a P5&hellip;</p>
+<p>I know, underwhelming right!? I wasn&rsquo;t kidding :)</p>
+<p>Like all hackers I don&rsquo;t want to submit P5&rsquo;s, and it&rsquo;s not something that you should submit anyway. These companies are looking for value in the reports and P5&rsquo;s just don&rsquo;t do it.</p>
+<h3 id="the-point-of-all-of-this">The point of all of this</h3>
+<p>My story is not unique in any way. Everyone struggles when they first start out and some people spend a year or more hunting for bugs and give up because they don&rsquo;t find
+anything! Considering my rocky journey so far, the one thing I&rsquo;ve learned is this: persistence and patience go a long way. Even though I&rsquo;ve not found anything
+significant up to this point, I&rsquo;m better than I was yesterday and that means more to me personally.</p>
+<p>Rather than having a goals focused on finding X number of bugs, or getting paid, my goals now are simply to get better every day, continue learning and have fun. The bugs
+will come. Even if I fail it&rsquo;s not like I&rsquo;m going to quit.</p>
+<p>Also, if you&rsquo;re new to all of this and you are going to submit bugs <em>make sure you can demonstrate some sort of impact</em>! This has been a hard lesson to learn for me, but
+after a few NA&rsquo;s I feel like I better understand the process in some sense. Proving that something is valid is one thing - proving that it has <em>impact</em> is totally different.</p>
+<p>If you made it this far, thank you for reading and I hope you enjoyed it!</p>
+<p>GLHF!</p>
+<p>-ghsinfosec</p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
