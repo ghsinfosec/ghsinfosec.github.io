@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on ghsinfosec</title>
+    <link>https://ghsinfosec.github.io/posts/</link>
+    <description>Recent content in Posts on ghsinfosec</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 10 Sep 2024 16:56:34 -0400</lastBuildDate><atom:link href="https://ghsinfosec.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Welcome</title>
+      <link>https://ghsinfosec.github.io/posts/welcome/</link>
+      <pubDate>Tue, 10 Sep 2024 16:56:34 -0400</pubDate>
+      
+      <guid>https://ghsinfosec.github.io/posts/welcome/</guid>
+      <description>Welcome! I&amp;rsquo;ve decided to restart this whole blog thing. I never really kept it up anyway, but maybe I&amp;rsquo;ll get serious this time&amp;hellip;
+If you&amp;rsquo;ve stumbled upon this somehow, there will be some content here eventually!
+-ghsinfosec</description>
+    </item>
+    
+  </channel>
+</rss>
