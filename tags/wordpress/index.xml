@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on ghsinfosec</title>
-    <link>https://ghsinfosec.github.io/posts/</link>
-    <description>Recent content in Posts on ghsinfosec</description>
+    <title>wordpress on ghsinfosec</title>
+    <link>https://ghsinfosec.github.io/tags/wordpress/</link>
+    <description>Recent content in wordpress on ghsinfosec</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 01 Nov 2024 07:14:34 -0400</lastBuildDate><atom:link href="https://ghsinfosec.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 Nov 2024 07:14:34 -0400</lastBuildDate><atom:link href="https://ghsinfosec.github.io/tags/wordpress/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>October 2024 Patchstack Bug Bounty Competition</title>
       <link>https://ghsinfosec.github.io/posts/october-2024-patchstack-bug-bounty-competition/</link>

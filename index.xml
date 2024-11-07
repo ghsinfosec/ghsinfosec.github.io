@@ -6,7 +6,16 @@
     <description>Recent content on ghsinfosec</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 10 Sep 2024 16:56:34 -0400</lastBuildDate><atom:link href="https://ghsinfosec.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 Nov 2024 07:14:34 -0400</lastBuildDate><atom:link href="https://ghsinfosec.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>October 2024 Patchstack Bug Bounty Competition</title>
+      <link>https://ghsinfosec.github.io/posts/october-2024-patchstack-bug-bounty-competition/</link>
+      <pubDate>Fri, 01 Nov 2024 07:14:34 -0400</pubDate>
+      
+      <guid>https://ghsinfosec.github.io/posts/october-2024-patchstack-bug-bounty-competition/</guid>
+      <description>WordPress has been my latest rabbit hole for hacking and bug bounty. For the past couple of months I&amp;rsquo;ve been tinkering with it on a local docker container and learning as much as I can about source code review. Up until this point I&amp;rsquo;ve only hunted for bugs occasionally on public bug bounty programs with marginal success. Fast forward to today and I am completely zoned in on WordPress plugins and having the most success (and fun!</description>
+    </item>
+    
     <item>
       <title>~$ whoami</title>
       <link>https://ghsinfosec.github.io/about/</link>
@@ -14,17 +23,6 @@
       
       <guid>https://ghsinfosec.github.io/about/</guid>
       <description>Hi 👋, I&amp;rsquo;m Heath aka ghsinfosec. I didn&amp;rsquo;t start getting serious about cybersecurity until I was about 32. It all started with a YouTube video by a guy named John Hammond. You may have heard of him 😏 &amp;hellip; After a few years of consistent failure I could almost consider myself a mediocre hacker security researcher, occasional CTF player, and I find myself jumping down rabbit holes probably more often than I care to admit.</description>
-    </item>
-    
-    <item>
-      <title>Welcome</title>
-      <link>https://ghsinfosec.github.io/posts/welcome/</link>
-      <pubDate>Tue, 10 Sep 2024 16:56:34 -0400</pubDate>
-      
-      <guid>https://ghsinfosec.github.io/posts/welcome/</guid>
-      <description>Welcome! I&amp;rsquo;ve decided to restart this whole blog thing. I never really kept it up anyway, but maybe I&amp;rsquo;ll get serious this time&amp;hellip;
-If you&amp;rsquo;ve stumbled upon this somehow, there will be some content here eventually!
--ghsinfosec</description>
     </item>
     
   </channel>

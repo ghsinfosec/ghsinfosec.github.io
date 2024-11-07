@@ -5,6 +5,16 @@
     <link>https://ghsinfosec.github.io/tags/</link>
     <description>Recent content in Tags on ghsinfosec</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://ghsinfosec.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Fri, 01 Nov 2024 07:14:34 -0400</lastBuildDate><atom:link href="https://ghsinfosec.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>wordpress</title>
+      <link>https://ghsinfosec.github.io/tags/wordpress/</link>
+      <pubDate>Fri, 01 Nov 2024 07:14:34 -0400</pubDate>
+      
+      <guid>https://ghsinfosec.github.io/tags/wordpress/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>October 2024 Patchstack Bug Bounty Competition // ghsinfosec</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.92.2" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="ghsinfosec" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="/css/main.min.5b1fcc8902588589c4767187402a3c29f8b8d7a6fdef6d9f8f77045bb0d14fee.css" />
+    
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="October 2024 Patchstack Bug Bounty Competition"/>
+<meta name="twitter:description" content="WordPress has been my latest rabbit hole for hacking and bug bounty. For the past couple of months I&rsquo;ve been tinkering with it on a local docker container and learning as much as I can about source code review. Up until this point I&rsquo;ve only hunted for bugs occasionally on public bug bounty programs with marginal success. Fast forward to today and I am completely zoned in on WordPress plugins and having the most success (and fun!"/>
+
+    <meta property="og:title" content="October 2024 Patchstack Bug Bounty Competition" />
+<meta property="og:description" content="WordPress has been my latest rabbit hole for hacking and bug bounty. For the past couple of months I&rsquo;ve been tinkering with it on a local docker container and learning as much as I can about source code review. Up until this point I&rsquo;ve only hunted for bugs occasionally on public bug bounty programs with marginal success. Fast forward to today and I am completely zoned in on WordPress plugins and having the most success (and fun!" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ghsinfosec.github.io/posts/october-2024-patchstack-bug-bounty-competition/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-11-01T07:14:34-04:00" />
+<meta property="article:modified_time" content="2024-11-01T07:14:34-04:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://ghsinfosec.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="ghsinfosec" /></a>
+      <span class="app-header-title">ghsinfosec</span>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/">/home</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/tags/">/tags</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/about/">/about</a>
+      </nav>
+      <p>Welcome to my blog, where everything&#39;s made up and the views don&#39;t matter!</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/ghsinfosec" target="_blank" rel="noreferrer noopener me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>Github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">October 2024 Patchstack Bug Bounty Competition</h1>
+      <div class="post-meta">
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Nov 1, 2024
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          3 min read
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
+</svg>
+              <a class="tag" href="https://ghsinfosec.github.io/tags/wordpress/">wordpress</a>
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <p>WordPress has been my latest rabbit hole for hacking and bug bounty. For the past couple of months I&rsquo;ve been tinkering with it on a local docker container and learning as much as I can about source code review. Up until this point I&rsquo;ve only hunted for bugs occasionally on public bug bounty programs with marginal success. Fast forward to today and I am completely zoned in on WordPress plugins and having the most success (and fun!) hacking on them. Here&rsquo;s a summary of how I did in the month of October on <a href="https://patchstack.com/bug-bounty">Patchstack&rsquo;s</a> Monthly Bug Bounty Competition.</p>
+<p><strong>TL;DR</strong>: Patchstack has a monthly bug bounty competition and they made history with 1571 valid bugs reported in a single month. This month I submitted 23 bugs (18 valid, 5 rejected) and finished in 12th place. 🥳</p>
+<h3 id="background">Background</h3>
+<p>Patchstack is one of a handful of WordPress security platforms that offers security services and bug bounty. Each month they hold a bug bounty competition where hackers can submit bugs in plugins and themes for a chance to win cash prizes. It&rsquo;s a bit different than traditional bug bounty for several reasons, but as someone who just started gaining some traction hacking on WordPress the competitive nature of it was incredibly motivating for me. My goal this month was to finish in the top 10 and I fell a bit short of my goal, but I&rsquo;m not at all disappointed. I was participating in a historic event with some of the most talented WordPress hackers in the world and somehow managed to finish in 12th place.</p>
+<p>Since October is &ldquo;Cybersecurity Awareness Month&rdquo; they adjusted their scope to accept submissions in plugins and themes with less than 1,000 installs, which ultimately helped the WordPress ecosystem by cleaning up outdated, vulnerable plugins. Likewise it opened up a massive attack surface and was highly beneficial to me in terms of improving my skillset. I&rsquo;ve included a breakdown of the bug types I found as well as their severity in a table below.</p>
+<p>If this sounds interesting to you then I recommend checking out the <a href="https://patchstack.com/articles/bug-bounty-guidelines-rules/">guidelines</a>.</p>
+<p>Before going into the results here are some cool stats from the month. Patchstack is going to put out some content around this as well so I&rsquo;ll link back to it once they&rsquo;ve posted it.</p>
+<blockquote>
+<table>
+<thead>
+<tr>
+<th>📈 Interesting Stats</th>
+<th>Submission Totals</th>
+<th>Percentage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Valid</td>
+<td>1571</td>
+<td>94% (of all submissions)</td>
+</tr>
+<tr>
+<td>Most by Single Researcher</td>
+<td>534</td>
+<td>34%</td>
+</tr>
+<tr>
+<td>Top 4 Hackers</td>
+<td>1084</td>
+<td>69%</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<h3 id="results">Results</h3>
+<p>Even though my goal was top 10, I&rsquo;m still very pleased with how it went for me. Below is a breakdown of the bugs I submitted. A few of these were collaborations and/or leads from some friends.</p>
+<p><strong>📇 Breakdown by Class</strong></p>
+<blockquote>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Submissions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>XSS</td>
+<td>9</td>
+</tr>
+<tr>
+<td>LFI</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Broken Access Control</td>
+<td>3</td>
+</tr>
+<tr>
+<td>SQLi</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Privilege Escalation</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Account Takeover</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Arbitrary File Download</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Arbitrary File Deletion</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Arbitrary File Upload/RCE</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<p><strong>⚠️ Breakdown by Severity</strong></p>
+<blockquote>
+<table>
+<thead>
+<tr>
+<th>Severity</th>
+<th>Submissions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Critical</td>
+<td>5</td>
+</tr>
+<tr>
+<td>High</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Medium</td>
+<td>7</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<p><strong>⛔ Breakdown by Rejection</strong></p>
+<blockquote>
+<table>
+<thead>
+<tr>
+<th>Reason</th>
+<th>Submissions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Duplicate</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Low/No Impact</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Out of Scope</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<p>In a future post I&rsquo;ll do a writeup of one of my findings from this event.</p>
+<p>Thanks for reading!</p>
+<p>-ghsinfosec</p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
