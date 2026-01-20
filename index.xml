@@ -6,7 +6,17 @@
     <description>Recent content on ghsinfosec</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 01 Nov 2024 07:14:34 -0400</lastBuildDate><atom:link href="https://ghsinfosec.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 16 Jan 2026 14:40:27 -0500</lastBuildDate><atom:link href="https://ghsinfosec.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Reducing Malware Detections with Signing and Encryption</title>
+      <link>https://ghsinfosec.github.io/posts/reducing-malware-detections-with-signing-and-encryption/</link>
+      <pubDate>Fri, 16 Jan 2026 14:40:27 -0500</pubDate>
+      
+      <guid>https://ghsinfosec.github.io/posts/reducing-malware-detections-with-signing-and-encryption/</guid>
+      <description>Lately I&amp;rsquo;ve taken a detour down the rabbit hole of malware development (as one does&amp;hellip;) and I think it deserves a look if you work in cybersecurity. The inspiration for this comes from the MalDev Academy main modules for developing malware. After working through some of the material again I wanted to share some interesting things that I&amp;rsquo;ve learned and observed as it relates to malware detection.
+Specifically we&amp;rsquo;re going to look at how payload encryption and binary signing significantly reduces detection rates based on tests with VirusTotal.</description>
+    </item>
+    
     <item>
       <title>October 2024 Patchstack Bug Bounty Competition</title>
       <link>https://ghsinfosec.github.io/posts/october-2024-patchstack-bug-bounty-competition/</link>
